@@ -2,11 +2,11 @@
     // editor
     "editor.wordWrap": "on",
     "editor.fontSize": 18,
-    "editor.lineHeight": 30,
+    "editor.lineHeight": 24,
     "editor.tabSize": 2,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": true,
-    "editor.minimap.enabled": false,
+    "editor.minimap.enabled": true,
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
   

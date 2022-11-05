@@ -6,16 +6,39 @@
   font-family: 'Roboto', sans-serif;
 }
 
+:root {
+  --card-title-border-color: #746615;
+  --card-color-primary: #f7dd43;
+  --card-bg-color: #1D1C19; 
+  --bg: url(../img/bg-yellow.svg)
+}
+
+body.blue {
+  --card-title-border-color: #338AF3;
+  --card-color-primary: #338AF3;
+  --card-bg-color: #202024;
+  --bg: url(../img/bg-blue.svg)
+}
+
+body.green {
+  --card-title-border-color: #047c3f;
+  --card-color-primary: #047c3f;
+  --card-bg-color: #1A1F1B;
+  --bg: url(../img/bg-green.svg)
+}
+
 body {
   background-color: #121214;
-  background-image: url(../img/bg.svg);
-  background-position-y: center;
-  background-position-y: -715px;
+  background-image: var(--bg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #app {
   width: fit-content;
-  margin: 52px auto;
+  margin: auto;
+  padding-top: 52px;
 }
 
 header {
@@ -33,8 +56,8 @@ header {
   padding: 32px 23px;
   text-align: center;
 
-  background: #1D1C19;
-  border-bottom: 2px solid #F7DD43;
+  background: var(--card-bg-color);
+  border-bottom: 2px solid var(--card-color-primary);
   border-radius: 6px;
 }
 
@@ -45,14 +68,14 @@ header {
   gap: 16px;
 
   padding: 8px 16px;
-  border: 1px solid #746615;
+  border: 1px solid var(--card-title-border-color);
   border-radius: 6px;
 
   width: fit-content;
   margin-inline: auto;
   margin-bottom: 53px;
 
-  color: #F7DD43;
+  color: #f7dd43;
 }
 
 .card h2 span {
@@ -86,4 +109,29 @@ header {
   line-height: 125%;
 
   color: #E1E1E6;
+}
+
+.card h2:hover,
+.card ul li img:hover {
+  transform: scale(1.1);
+}
+
+.card h2,
+.card ul li img {
+  transition: transform 0.3s;
+}
+
+.card {
+  opacity: 0;
+  animation: appear .2s forwards;
+}
+
+@keyframes appear {
+  0%{
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
