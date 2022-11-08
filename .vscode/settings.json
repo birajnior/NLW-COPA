@@ -34,5 +34,14 @@
     },
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "window.zoomLevel": 0,
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[css]": {
+      "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+    }
   }
