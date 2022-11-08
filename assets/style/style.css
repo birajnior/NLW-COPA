@@ -43,9 +43,42 @@ body {
 }
 
 header {
-  margin-bottom: 63px;
+  margin-bottom: 35px;
   text-align: center;
 }
+
+.btns {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.btn-green, .btn-yellow, .btn-blue {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.btn-green {
+  border: 1px solid #047c3f;
+  background: #047c3f;
+} 
+
+.btn-yellow {
+  border: 1px solid #f7dd43;
+  background: #f7dd43;
+} 
+
+.btn-blue {
+  border: 1px solid #338AF3;  
+  background: #338AF3;
+}
+
+.btn-green:hover,
+.btn-yellow:hover,
+.btn-blue:hover {
+  transform: scale(1.2);
+}
+
 
 #cards {
   display: flex;
@@ -113,6 +146,7 @@ header {
 }
 
 .card ul li img:hover {
+  cursor: pointer;
   transform: scale(1.1);
 }
 
@@ -166,7 +200,6 @@ footer {
 
 .socials a {
   text-decoration: none;
-  text-shadow: 1px 1px 1px var(--card-color-primary);
   color: var(--card-color-primary);
 }
 

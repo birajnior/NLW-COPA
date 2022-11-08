@@ -23,21 +23,28 @@ function createGame(player1, hour, player2) {
 }
 
 document.querySelector('#app').innerHTML = `
-  <header>
+    <header>
         <img src="./assets/img/logo.svg" alt="Logo da NLW" id="logo-nlw">
-    </header>
+    </header>  
+
+       
+        <div class="btns">
+            <button class="btn-green" onclick="changeThemeGreen()"></button>
+            <button class="btn-yellow" onclick="changeThemeYellow()"></button>
+            <button class="btn-blue" onclick="changeThemeBlue()"></button>
+        </div>
 
     <main id="cards">
         ${createCard('20/11', 'domingo', createGame('catar', '13:00', 'equador'))} 
 
         ${createCard('21/11', 'segunda', createGame('inglaterra', '10:00', 'ira') + createGame('senegal', '13:00', 'holanda')
-  + createGame('estadosUnidos', '16:00', 'gales'))} 
+        + createGame('estadosUnidos', '16:00', 'gales'))} 
 
         ${createCard('22/11', 'terça', createGame('argentina', '07:00', 'arabiaSaudita') + createGame('dinamarca', '10:00', 'tunisia')
-    + createGame('mexico', '13:00', 'polonia') + createGame('franca', '16:00', 'australia'))} 
+        + createGame('mexico', '13:00', 'polonia') + createGame('franca', '16:00', 'australia'))} 
         
         ${createCard('23/11', 'quarta', createGame('marrocos', '07:00', 'croacia') + createGame('alemanha', '10:00', 'japao')
-      + createGame('espanha', '13:00', 'costaRica') + createGame('belgica', '16:00', 'canada'))}
+        + createGame('espanha', '13:00', 'costaRica') + createGame('belgica', '16:00', 'canada'))}
 
         ${createCard('24/11', 'quinta', createGame('suica', '07:00', 'camaroes') + createGame('uruguai', '10:00', 'coreiaDoSul')
         + createGame('portugal', '13:00', 'gana') + createGame('brasil', '16:00', 'servia'))}
@@ -67,3 +74,23 @@ document.querySelector('#app').innerHTML = `
                         + createGame('servia', '16:00', 'suica') + createGame('camaroes', '16:00', 'brasil'))}
     </main>
 `
+
+function removeColor() {
+  document.body.classList.remove("yellow")
+  document.body.classList.remove("blue")
+  document.body.classList.remove("green")
+}
+function changeThemeGreen() {
+  removeColor()
+  document.body.classList.add("green")
+}
+
+function changeThemeYellow() {
+  removeColor()
+  document.body.classList.add("yellow")
+}
+
+function changeThemeBlue() {
+  removeColor()
+  document.body.classList.add("blue")
+}
